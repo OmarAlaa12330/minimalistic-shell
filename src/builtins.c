@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 void
 cd_command(char **args) {
@@ -23,4 +24,11 @@ pwd_command() {
     } else {
         perror("myshell");
     }
+}
+
+
+void
+exit_command() {
+    printf("Closing myshell...\n");
+    exit(0);
 }
