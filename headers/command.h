@@ -5,5 +5,3 @@
 void
 parse_command(char *input, char **args);
 
-void
-cd_command(char **args);
