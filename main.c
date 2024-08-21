@@ -1,7 +1,12 @@
 #include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include "command.h"
 
-int main() {
-    char input[1024];
+int main(void) {
+    char input[100];
+    char *args[MAX_ARGS];
+
 
     while (1) {
         printf("myshell> ");
@@ -10,6 +15,14 @@ int main() {
         }
 
         printf("You entered: %s", input);
+
+        parse_command(input, args);
+
+        // Check if "cd" command is used
+        if (strcmp(args[0], "cd") == 0) {
+            cd_command(args);
+        }
+
     }
     printf("Closing shell...");
     return 0;
