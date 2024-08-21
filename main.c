@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "command.h"
+#include "builtins.h"
 
 int main(void) {
     char input[100];
@@ -20,7 +21,14 @@ int main(void) {
         // Check if "cd" command is used
         if (strcmp(args[0], "cd") == 0) {
             cd_command(args);
+            continue;
         }
+
+        if (strcmp(args[0], "pwd") == 0) {
+            pwd_command();
+            continue;
+        }
+
 
     }
     printf("Closing shell...");
