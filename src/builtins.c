@@ -49,3 +49,8 @@ ls_command() {
         perror("myshell");
     }
 }
+
+void
+clear_command() {
+    printf("\033[H\033[J");
+}

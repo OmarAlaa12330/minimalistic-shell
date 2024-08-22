@@ -33,6 +33,11 @@ int main(void) {
             continue;
         }
 
+        if (strcmp(args[0], "clear") == 0) {
+            clear_command();
+            continue;
+        }
+
         if (strcmp(args[0], "exit") == 0) {
             exit_command();
             //Will terminate shell

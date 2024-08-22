@@ -11,3 +11,6 @@ exit_command();
 
 void
 ls_command();
+
+void
+clear_command();
