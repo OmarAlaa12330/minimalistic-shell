@@ -14,11 +14,10 @@ int main(void) {
             break;
         }
 
-        printf("You entered: %s", input);
 
         parse_command(input, args);
 
-        // Check if "cd" command is used
+
         if (strcmp(args[0], "cd") == 0) {
             cd_command(args);
             continue;
@@ -26,6 +25,11 @@ int main(void) {
 
         if (strcmp(args[0], "pwd") == 0) {
             pwd_command();
+            continue;
+        }
+
+        if (strcmp(args[0], "ls") == 0) {
+            ls_command();
             continue;
         }
 

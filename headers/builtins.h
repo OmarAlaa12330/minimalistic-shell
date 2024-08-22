@@ -8,3 +8,6 @@ pwd_command();
 
 void
 exit_command();
+
+void
+ls_command();
